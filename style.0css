@@ -1,0 +1,213 @@
+/*
+ Theme Name: Ronas Attari
+ Theme URI: https://nitrobert.com/
+ Description: A child theme for the Hello Elementor theme
+ Author: نیتروبرت
+ Author URI: https://nitrobert.com/
+ Template: hello-elementor
+ Version: 1.0.0
+ Text Domain: ronas-attari-child
+*/
+
+/* Start writing your custom styles below */
+/* افزودن فونت IRANSans */
+@font-face {
+	font-family: 'IRANSans';
+	font-style: normal;
+	font-weight: bold;
+	src: url('fonts/IRANSansXFaNum-Bold.woff') format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'IRANSans';
+	font-style: normal;
+	font-weight: normal;
+	src: url('fonts/IRANSansXFaNum-Regular.woff') format('woff');
+	font-display: swap;
+}
+
+/* رنگ پس‌زمینه اصلی */
+body {
+    background-color: #FAF3E0 !important; /* رنگ کرم ملایم */
+    color: #202226 !important;
+}
+
+/* تنظیمات پایه برای همه المان‌ها */
+* {
+    font-style: normal !important;
+    letter-spacing: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* استایل اسکرول‌بار */
+*::-webkit-scrollbar {
+    width: 8px !important;
+}
+*::-webkit-scrollbar-thumb {
+	border-radius: 10px !important;
+    background-color: #8D6E63 !important; /* رنگ قهوه‌ای طبیعی */
+}
+*::-webkit-scrollbar-track {
+    background-color: #F5F5F5 !important;
+}
+
+/* تراز راست برای عنوان‌ها و لیبل‌ها */
+label, .modal-title, .elementor-heading-title {
+    text-align: right !important;
+}
+
+/* تنظیمات فونت و جهت برای متن‌های عمومی */
+body, p, input, q, textarea, label, select, button, .button, .elementor-widget-icon-box .elementor-icon-box-title a {
+    font-family: IRANSans, Tahoma !important;
+    direction: rtl !important;
+}
+
+/* تنظیم جهت برای عناصر بلوکی HTML5 */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    direction: rtl !important;
+}
+
+/* تنظیمات تیترها */
+h1, h2, h3, h4, h5, h6, .elementor-widget-heading .elementor-heading-title {
+    font-family: IRANSans, Tahoma !important;
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+/* تنظیمات لیست‌ها */
+ul li, .elementor-icon-list-text {
+    font-family: 'IRANSans' !important;
+    line-height: 30px !important;
+    text-align: right !important;
+}
+
+/* استایل‌دهی دکمه‌ها */
+button, .button, .elementor-button, .btn-primary, .btn-secondary {
+    font-family: IRANSans, Tahoma !important;
+    background-color: #2E7D32 !important; /* سبز تیره */
+    color: #FFFFFF !important;
+    border-radius: 5px !important;
+    padding: 10px 20px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease !important;
+    text-align: center;
+    display: inline-block;
+    margin: 0 5px;
+}
+button:hover, .button:hover, .elementor-button:hover, .btn-primary:hover, .btn-secondary:hover {
+    background-color: #276B29 !important; /* سبز تیره‌تر */
+}
+button:active, .button:active, .elementor-button:active, .btn-primary:active, .btn-secondary:active {
+    background-color: #1E5B24 !important; /* سبز تیره‌تر در حالت کلیک */
+}
+button:disabled, .button:disabled, .elementor-button:disabled, .btn-primary:disabled, .btn-secondary:disabled {
+    background-color: #B1B5C3 !important; /* خاکستری ملایم برای دکمه غیرفعال */
+    color: #FFFFFF !important;
+    cursor: not-allowed !important;
+}
+
+/* تنظیمات لینک‌ها */
+a {
+    color: #2E7D32 !important; /* سبز تیره */
+    text-decoration: none !important;
+}
+a:hover {
+    color: #276B29 !important; /* تغییر رنگ در هاور */
+    text-decoration: underline !important;
+}
+a:visited {
+    color: #8D6E63 !important; /* قهوه‌ای طبیعی برای لینک‌های بازدیدشده */
+}
+
+/* استایل سبد خرید در هدر */
+.elementor-menu-cart__toggle_button {
+    background-color: #2E7D32 !important;
+    color: #FFFFFF !important;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.elementor-menu-cart__toggle_button:hover {
+    background-color: #276B29 !important;
+}
+.elementor-button-icon-qty {
+    background-color: #FF6B6B !important;
+    color: #FFFFFF !important;
+    border-radius: 50%;
+    font-size: 0.7em !important;
+    padding: 3px 5px !important;
+    margin-left: 5px;
+}
+
+/* استایل فرم جستجو */
+.e-search-input-wrapper {
+    background-color: #FFFFFF;
+    border: 1px solid #DDC8C4;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 200px;
+}
+.e-search-input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+}
+.e-search-input::placeholder {
+    color: #999;
+    font-size: 14px;
+}
+
+/* رنگ‌های خطا و موفقیت */
+.alert-success {
+    background-color: #66BB6A !important; /* سبز روشن */
+    color: #FFFFFF !important;
+    padding: 10px !important;
+    border-radius: 5px !important;
+}
+.alert-error {
+    background-color: #D32F2F !important; /* قرمز برای خطا */
+    color: #FFFFFF !important;
+    padding: 10px !important;
+    border-radius: 5px !important;
+}
+
+/* رنگ پس‌زمینه باکس‌های اطلاعات */
+.box-background {
+    background-color: #F8F9FA !important;
+    padding: 15px !important;
+    border-radius: 5px !important;
+}
+
+/* رنگ خطوط جداکننده */
+.separator {
+    border-top: 1px solid #E0E0E0 !important;
+    margin: 20px 0 !important;
+}
+
+/* تنظیمات لیست‌های مرتب */
+ol {
+    list-style-type: decimal !important;
+    padding-right: 20px !important;
+}
+
+/* تنظیمات بیشتر برای متن‌ها و دکمه‌ها */
+.description-text {
+    color: #B1B5C3 !important; /* خاکستری ملایم برای متن‌های توضیحی */
+}
+
+.primary-text {
+    color: #2E7D32 !important; /* رنگ متن اصلی */
+}
+
+.highlight {
+    background-color: #8D6E63 !important; /* قهوه‌ای طبیعی */
+    color: #FFFFFF !important;
+    padding: 5px 10px !important;
+    border-radius: 5px !important;
+    display: inline-block !important;
+}
