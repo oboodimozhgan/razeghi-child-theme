@@ -1,0 +1,2431 @@
+/*
+ Theme Name: Razeghiparts template
+ Theme URI: https://razeghiparts.com/
+ Description: A child theme for the Hello Elementor theme
+ Author: Mozhgan
+ Author URI: https://razeghiparts.com/
+ Template: hello-elementor
+ Version: 1.0.0
+ Text Domain: nitrobert-child
+*/
+
+
+/* Start writing your custom styles below */
+/* تعریف متغیرهای CSS */
+/* تعریف متغیرهای CSS */
+:root {
+  --main-bg-color: #F4F1DE; /* پس‌زمینه اصلی */
+  --text-color: #2A3B2C; /* رنگ متن اصلی */
+  --accent-color: #6A994E; /* رنگ سبز گیاهی */
+  --secondary-color: #e2231a; /* رنگ قهوه‌ای طبیعی */
+  --highlight-color: #FFC857; /* رنگ زرد زعفرانی */
+
+  --button-bg-color: #292929; /* رنگ پس‌زمینه دکمه رنگی */
+  --button-text-color: #FFF; /* رنگ متن دکمه رنگی */
+  --button-hover-bg-color: #56555a; /* رنگ دکمه رنگی در هاور */
+  --button-border-color: #8D6E63; /* رنگ خط دور دکمه خنثی */
+  --button-neutral-text-color: #2A3B2C; /* رنگ متن دکمه خنثی */
+  --button-hover-border-color: #6A994E; /* رنگ خط دور دکمه خنثی در هاور */
+  --button-focus-color: #FFC857; /* رنگ دکمه در حالت فوکوس */
+}
+
+/* افزودن فونت IRANSans */
+@font-face {
+  font-family: 'IRANSans';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/IRANSansXFaNum-Regular.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IRANSans';
+  font-style: normal;
+  font-weight: bold;
+  src: url('fonts/IRANSansXFaNum-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+    h2.elementor-heading-title.elementor-size-default,.elementor-heading-title {
+    line-height: 1.2 !important;
+}
+
+strong {
+    font-family: 'IRANSans';
+}
+/* استایل برای لیست ترم‌ها به صورت افقی */
+.custom-taxonomy-list {
+    display: flex;
+    flex-wrap: wrap; /* به‌طوری که اگر فضا کافی نبود، به خط بعدی بروند */
+    padding: 0;
+    margin: 0;
+    list-style-type: none; /* حذف نقطه‌ها */
+}
+#reviews .woocommerce-Reviews-title {
+    display: none !important;
+}
+
+h2.woocommerce-Reviews-title{
+    display: none !important;
+}
+/* استایل برای هر آیتم در لیست */
+/* استایل لینک‌ها */
+/*.custom-taxonomy-list li a {
+    text-decoration: none; /* حذف خط زیر لینک */
+   /* color: #fff; /* رنگ متن سفید */
+   /* background-color: #00aa95; /* رنگ پس‌زمینه لینک */
+    /*font-weight: bold; /* برجسته کردن متن لینک */
+    /*font-size: 16px;
+    padding: 5px 8px;
+    border-radius: 5px 0px 0px 5px;
+   /* display: inline-block;*/
+  /*  transition: background-color 0.3s ease, color 0.3s ease; /* انیمیشن تغییر رنگ */
+/*}*/
+
+.custom-taxonomy-list li a {
+    color: #fff;
+    background-color: #00aa95;
+    font-size: 12px;
+    padding: 5px 8px;
+    border-radius: 5px 0px 0px 5px;
+    display: flex;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-left: 5px;
+}
+ .wc-price-inquiry-text{
+    font-family: 'iranyekanwebmedium_FaNum';
+}
+
+
+
+/* استایل‌ها برای زمانی که موس خود را روی لینک می‌برید */
+.custom-taxonomy-list li a:hover {
+    background-color: #a72f04; /* تغییر رنگ پس‌زمینه هنگام هاور */
+    color: #fff; /* تغییر رنگ متن هنگام هاور */
+}
+
+/* استایل خاص برای لیست "طبع محصول" */
+.product-nature-list li {
+    border-right: 3px solid #8d6e63; /* خط کنار آیتم */
+}
+
+/* استایل خاص برای لیست "خواص درمانی" */
+.ther-benefits-list li {
+    background-color: #fffbe6; /* رنگ پس‌زمینه برای هر آیتم */
+    border-right: 3px solid #ffcc00; /* خط کنار آیتم */
+}
+
+/* استایل برای عنوان (h3) */
+.custom-taxonomy-list h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px; /* فاصله بین عنوان و لیست */
+    font-weight: bold;
+}
+
+
+
+.woocommerce div.product div.images {
+    margin-bottom: 0px !important;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs {
+    overflow: hidden;
+    zoom: 1;
+    margin: 6px;
+    padding: 0;
+}
+
+
+/* تنظیمات عمومی بدنه */
+body {
+    overflow-x: hidden;
+}
+body, button, input, textarea, select {
+  font-family: 'IRANSans', Tahoma !important;
+  background-color: var(--main-bg-color); 
+  color: var(--text-color); 
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  text-align: right;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+/* دکمه‌ها */
+.elementor-button {
+  background-color: var(--highlight-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .elementor-button:hover {
+  background-color: var(--accent-color);
+  color: #FFF;
+}
+
+button:focus, .elementor-button:focus {
+  outline: none;
+  box-shadow: 0 0 4px var(--highlight-color);
+}
+
+/* لینک‌ها */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--highlight-color);
+  text-decoration: underline;
+}
+
+a:focus, a:active {
+  outline: none;
+  color: var(--highlight-color);
+}
+
+/* استایل متن جدول محتوا در هاور */
+.elementor-toc__body .elementor-toc__list-item-text:hover {
+  color: var(--highlight-color);
+  text-decoration: underline;
+}
+
+/* استایل فرم‌ها */
+.elementor-form input[type="text"], 
+.elementor-form input[type="email"], 
+.elementor-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--main-bg-color);
+  border-radius: 5px;
+ font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.elementor-form button {
+  background-color: var(--accent-color);
+  color: #FFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.elementor-form button:hover {
+  background-color: var(--highlight-color);
+}
+
+.elementor-field-invalid {
+  border-color: var(--error-color);
+  background-color: #FFE6E6;
+}
+
+.elementor-message-error {
+  color: var(--error-color);
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* استایل نمایش مقالات */
+.elementor-post__text {
+  background-color: #FFF;
+  padding: 20px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.elementor-post__title a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.elementor-post__title a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.elementor-post__meta-data {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.elementor-post__excerpt p {
+  color: #202226;
+  line-height: 1.6;
+}
+
+.elementor-post__read-more {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.elementor-post__read-more:hover {
+  color: var(--highlight-color);
+  text-decoration: underline;
+}
+
+/* استایل کارت مقالات */
+.elementor-post__card {
+  background-color: #F9F9F9;
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.elementor-post__card .elementor-post__title a {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.elementor-post__card .elementor-post__title a:hover {
+  color: var(--accent-color);
+}
+
+.elementor-post__card .elementor-post__meta-data {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+/* لیست‌ها */
+ul, ol {
+  padding-left: 20px;
+  margin-bottom: 1rem;
+}
+
+ul li, ol li {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+/* بلاک‌کوت‌ها */
+blockquote {
+  border-right: 5px solid var(--secondary-color);
+  padding: 10px 15px;
+  background-color: var(--main-bg-color);
+  font-style: italic;
+  color: var(--text-color);
+}
+
+/* تصاویر */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* اسکرول‌بار */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+ background-color: var(--secondary-color);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+}
+
+/* پاورقی */
+footer {
+  background-color: var(--text-color);
+  color: var(--main-bg-color);
+  /*padding: 20px;*/
+  text-align: center;
+}
+
+footer a {
+  color: var(--highlight-color);
+}
+footer p, footer h4, footer li {
+  color: var(--highlight-color);
+}
+/* استایل پایه برای دکمه‌های لینک */
+.button-colored,
+.button-neutral {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* حذف زیرخط پیش‌فرض لینک */
+    font-size: 15px;
+    padding: 12px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 100px;
+    height: 40px;
+    text-align: center;
+}
+
+/* دکمه رنگی */
+.button-colored {
+    background-color: var(--button-bg-color, #4CAF50); /* رنگ پس‌زمینه */
+    color: var(--button-text-color, #FFF); /* رنگ متن با کنتراست بالا */
+    border: none;
+}
+
+.button-colored:hover {
+    background-color: var(--button-hover-bg-color, #6A994E);
+    color: #FFF; /* حفظ رنگ متن سفید در هاور */
+    text-decoration: none; /* اطمینان از حذف خط زیر متن */
+}
+
+/* دکمه خنثی */
+.button-neutral {
+    background-color: transparent; /* بدون پس‌زمینه */
+    color: var(--button-neutral-text-color, #2A3B2C); /* رنگ متن خنثی با تضاد کافی */
+    border: 2px solid var(--button-border-color, #8D6E63); /* خط دور */
+}
+
+.button-neutral:hover {
+    color: var(--button-hover-border-color, #6A994E); /* تغییر رنگ متن در هاور */
+    border-color: var(--button-hover-border-color, #6A994E); /* تغییر رنگ خط دور در هاور */
+    text-decoration: none; /* حذف خط زیر لینک در هاور */
+}
+
+.button-neutral:focus,
+.button-colored:focus {
+    outline: none;
+    box-shadow: 0 0 4px var(--button-hover-border-color, #6A994E);
+}
+/* استایل برای نمایش ویژگی‌ها */
+.attribute-container {
+    margin-bottom: 20px;
+}
+
+.attribute-container label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.option {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #d3d3d3;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.option:hover {
+    background-color: #64b75c;  /* پالت رنگی سایت عطاری */
+    color: white;
+}
+
+.option.selected {
+    background-color: #64b75c;
+    color: white;
+}
+
+/* استایل برای تیک انتخاب شده */
+.checkmark {
+    color: white;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+/* استایل برای تخفیف */
+.discount {
+    font-size: 22px;
+    color: #e74c3c;
+    display: flex;
+    align-items: center;
+}
+
+.discount-percent {
+    background-color: #ff5722;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.discounted-price {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #777;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* استایل دکمه افزودن به سبد خرید */
+button.single_add_to_cart_button.button.alt{
+      height:45px;
+}
+button.single_add_to_cart_button {
+  
+    background-color: #64b75c;  /* پالت رنگی سایت عطاری */
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button.single_add_to_cart_button:hover {
+    background-color: #45a04a;
+     height:45px;
+}
+
+
+
+
+/*سفرشی سازی میزان تخفیف*/
+selector {
+text-align: center
+}
+
+.nitrobert-product-discount{
+background: #EF394F;
+color: #fff;
+font-family: 'iranyekanwebregular_FaNum';
+font-size: 12px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+width: 65px;
+display: inline-block;
+padding: 8px 0px
+
+}
+
+.nitrobert-product-discount span{
+display: block;
+font-size: 15px;
+}
+
+/*** دکمه‌های + و - برای فیلد تعداد محصولات در ووکامرس ***/
+.woocommerce-variation-add-to-cart .plus,
+.woocommerce-variation-add-to-cart .minus {
+    width: 45px;
+    height: 45px;
+   /* padding: 10px 18px !important;*/
+    border: 2px solid var(--button-border-color) !important;
+    background: var(--button-bg-color) !important;
+    font-size: 20px !important;
+    color: var(--button-text-color) !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    border-radius: 6px !important;
+}
+
+.woocommerce-variation-add-to-cart .plus:hover,
+.woocommerce-variation-add-to-cart .minus:hover,
+.woocommerce-variation-add-to-cart .plus:focus,
+.woocommerce-variation-add-to-cart .minus:focus {
+    background: var(--button-hover-bg-color) !important;
+    border-color: var(--button-hover-border-color) !important;
+    outline: none !important;
+    box-shadow: 0 0 5px rgba(106, 153, 78, 0.5) !important;
+    color: var(--button-text-color) !important;
+}
+button.plus {
+    margin-right: 10px !important;
+}
+button.minus {
+    margin-left: 10px;
+}
+.quantity {
+    margin: 0px !important;
+    width: 45px !important; /* عرض ثابت برای هماهنگی با دکمه‌ها */
+    height: 45px;
+}
+
+.quantity .qty {
+      background: var(--main-bg-color) !important;
+    border: 1px solid var(--secondary-color) !important;
+    border-radius: 8px !important;
+    width: 45px !important;
+    text-align: center !important;
+  /*  margin: 0 10px !important;*/
+    font-size: 16px !important;
+    color: var(--text-color) !important;
+}
+
+.wc-block-components-quantity-selector .wc-block-components-quantity-selector__button {
+    transition: background-color 0.3s ease;
+}
+
+.wc-block-components-quantity-selector .wc-block-components-quantity-selector__button:hover,
+.wc-block-components-quantity-selector .wc-block-components-quantity-selector__button:focus {
+    background: var(--button-hover-bg-color) !important;
+    outline: none !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+/*** قیمت ***/
+.price del {
+    color: var(--secondary-color);
+    text-decoration: line-through;
+    font-weight: normal;
+}
+
+.price ins {
+    color: var(--highlight-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.stock.in-stock {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/*** متن‌های عمومی ***/
+/*body, p, span, .description {
+    color: var(--text-color);
+}*/
+
+body, p, .description, span:not(.elementor-edit-link-title) {
+    color: var(--text-color);
+}
+/*** قیمت با تخفیف ***/
+.woocommerce-variation-price {
+    background-color: var(--main-bg-color);
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/*** دکمه افزودن به سبد خرید ***/
+.single_add_to_cart_button.button.alt, .checkout-button, button.button.e-apply-coupon {
+     height:45px;
+    all: unset;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: var(--button-bg-color) !important;
+    color: var(--button-text-color) !important;
+    border: 2px solid var(--button-border-color) !important;
+    padding: 12px 12px;
+    font-size: 14px;
+   /*font-weight: bold;*/
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.single_add_to_cart_button.button.alt:hover, .checkout-button:hover {
+    background-color: var(--button-hover-bg-color);
+    border-color: var(--button-hover-border-color);
+    transform: scale(1.05);
+}
+
+.single_add_to_cart_button.button.alt:focus, .checkout-button:focus {
+    background-color: var(--button-focus-color) !important;
+    border-color: var(--button-focus-color) !important;
+    color: var(--button-text-color) !important;
+}
+
+.single_add_to_cart_button.button.alt:active, .checkout-button:active {
+    background-color: var(--highlight-color);
+    border-color: var(--button-focus-color);
+    transform: scale(0.98);
+}
+
+/*** سایر دکمه‌ها ***/
+button, .button, .checkout-button, button.button.e-apply-coupon {
+    background-color: var(--button-bg-color) !important;
+    color: var(--button-text-color);
+    border: 2px solid var(--button-border-color);
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover, .button:hover, .checkout-button:hover, button.button.e-apply-coupon:hover {
+    background-color: var(--button-hover-bg-color);
+    border-color: var(--button-hover-border-color);
+}
+
+button:focus, .button:focus, .checkout-button:focus, button.button.e-apply-coupon:foucus {
+    background-color: var(--button-focus-color);
+    border-color: var(--button-hover-border-color);
+    outline: none;
+}
+
+ a.checkout-button.button.alt.wc-forward, td.product-name {
+  font-family: 'IRANSans', Tahoma !important;
+}
+/* برای مرورگرهای Webkit (مانند Chrome و Safari) */
+.quantity .qty::-webkit-outer-spin-button,
+.quantity .qty::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* برای مرورگر Firefox */
+.quantity .qty {
+    -moz-appearance: textfield;
+}
+
+/* استایل کلی برای بخش سفارش *//* استایل عمومی برای بخش سفارش */
+.woocommerce-order {
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  padding: 30px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  font-family: 'IRANSans', Tahoma, sans-serif !important;
+}
+
+/* پیام موفقیت */
+.woocommerce-notice--success {
+  background-color: var(--accent-color) !important;
+  color: #fff !important;
+  padding: 15px !important;
+  border-radius: 8px !important;
+  text-align: center !important;
+  font-weight: bold !important;
+  margin-bottom: 20px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* استایل لیست جزئیات سفارش */
+.woocommerce-order-overview {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  background-color: #fff !important;
+  padding: 20px !important;
+  border-radius: 8px !important;
+  border: 1px solid #E5DFD3 !important;
+  margin-bottom: 20px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+.woocommerce-order-overview li {
+  flex: 1 1 220px !important;
+  padding: 15px !important;
+  text-align: center !important;
+  font-size: 1rem !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--secondary-color) !important;
+}
+
+/*.woocommerce-order-overview li:last-child {
+  border-right: none !important;
+}*/
+.woocommerce ul.order_details li {
+    float: right;
+    margin-left: 20px;
+    border-radius: 8px;
+}
+/* استایل متن اصلی در جزئیات */
+.woocommerce-order-overview strong {
+  display: block !important;
+  font-size: 1.2rem !important;
+  color: var(--highlight-color) !important;
+  margin-top: 5px !important;
+}
+
+.woocommerce-order-overview__payment-method {
+  font-size: 1.1rem !important;
+  font-weight: bold !important;
+  color: var(--accent-color) !important;
+  margin-top: 10px !important;
+}
+
+/* عنوان مشخصات سفارش */
+.woocommerce-order-details__title {
+  font-size: 1.8rem !important;
+  color: var(--text-color) !important;
+  margin-bottom: 20px !important;
+  text-align: center !important;
+  font-weight: bold !important;
+  border-bottom: 2px solid var(--accent-color) !important;
+  display: inline-block !important;
+  padding-bottom: 5px !important;
+}
+
+/* جدول مشخصات سفارش */
+.shop_table.order_details {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  background-color: #fff !important;
+  border: 1px solid var(--secondary-color) !important;
+  border-radius: 8px !important;
+  margin-bottom: 20px !important;
+}
+
+.shop_table.order_details th {
+  background-color: var(--highlight-color) !important;
+  color: var(--text-color) !important;
+  font-weight: bold !important;
+  padding: 12px !important;
+  text-align: center !important;
+  font-size: 1rem !important;
+}
+
+.shop_table.order_details td {
+  padding: 12px !important;
+  border-bottom: 1px solid var(--secondary-color) !important;
+}
+
+.shop_table.order_details tfoot th {
+  background-color: #fff !important;
+  font-weight: bold !important;
+  text-align: left !important;
+}
+
+.shop_table.order_details tfoot td {
+  font-weight: bold !important;
+  background-color: var(--highlight-color) !important;
+  color: var(--text-color) !important;
+  padding: 10px !important;
+}
+
+/* استایل محصولات در جزئیات سفارش */
+.woocommerce-table__product-name a {
+  color: var(--accent-color) !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+}
+
+.woocommerce-table__product-name a:hover {
+  color: var(--highlight-color) !important;
+  text-decoration: underline !important;
+}
+
+/* استایل بخش آدرس */
+.woocommerce-columns--addresses {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 20px !important;
+  margin-top: 20px !important;
+}
+
+.woocommerce-column {
+  flex: 1 !important;
+  background-color: #fff !important;
+  padding: 20px !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--secondary-color) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+.woocommerce-column__title {
+  font-size: 1.4rem !important;
+  color: var(--highlight-color) !important;
+  margin-bottom: 10px !important;
+  font-weight: bold !important;
+}
+
+address {
+  font-style: normal !important;
+  line-height: 1.8 !important;
+  color: var(--text-color) !important;
+}
+
+.woocommerce-customer-details--phone,
+.woocommerce-customer-details--email {
+  font-weight: bold !important;
+  margin-top: 10px !important;
+  color: var(--accent-color) !important;
+}
+
+
+
+
+
+/* تنظیمات کروسل محصولات */
+
+/* تنظیمات فقط برای موبایل و تبلت */
+@media (max-width: 1024px) {
+  /* استایل کلی برای کاروسل */
+  .nb-product-carousel .elementor-loop-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* بهبود اسکرول در موبایل */
+    gap: 10px;
+    padding: 10px;
+  }
+
+  /* استایل آیتم‌ها */
+  .nb-product-carousel .elementor-loop-container .e-loop-item {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    width: 80%; /* اندازه آیتم برای موبایل */
+    box-sizing: border-box;
+  }
+
+  /* تنظیمات برای نوار پیمایش */
+  .nb-product-carousel .elementor-loop-container::-webkit-scrollbar {
+    height: 6px; /* ارتفاع نوار پیمایش */
+    background: #f1f1f1; /* پس‌زمینه نوار پیمایش */
+  }
+
+  .nb-product-carousel .elementor-loop-container::-webkit-scrollbar-thumb {
+    background: #888; /* رنگ نوار پیمایش */
+    border-radius: 10px; /* گرد کردن اسکرول‌بار */
+  }
+
+  .nb-product-carousel .elementor-loop-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* تغییر رنگ هنگام هاور */
+  }
+
+  /* راهنمای پیمایش */
+  .nb-product-carousel::after {
+    content: "← پیمایش به چپ یا راست →"; /* متن راهنما */
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+  }
+
+  /* تنظیم برای تبلت (عرض بین 768px و 1024px) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .nb-product-carousel .elementor-loop-container .e-loop-item {
+      width: auto; /* عرض آیتم به صورت خودکار متناسب با محتوا */
+      max-width: 40%; /* حداکثر نصف عرض برای آیتم */
+    }
+  }
+}
+
+/* تنظیمات پیش‌فرض برای دسکتاپ */
+@media (min-width: 1025px) {
+  .nb-product-carousel .elementor-loop-container {
+    display: grid; /* بازگشت به حالت شبکه‌ای */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    overflow: visible;
+  }
+
+  .nb-product-carousel .elementor-loop-container .e-loop-item {
+    width: 100%; /* تنظیم عرض آیتم‌ها به صورت خودکار */
+  }
+}
+
+
+
+/* استایل کلی فرم *//* تنظیم کلی فرم */
+/* تنظیم کلی فرم */
+/* تنظیم کلی فرم */
+.elementor-form {
+    background-color: #A8D5BA; /* پس‌زمینه سبز ملایم */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* استایل فیلدهای ورودی */
+.elementor-field-group input[type="text"],
+.elementor-field-group input[type="number"],
+.elementor-field-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #6A492B; /* حاشیه قهوه‌ای تیره */
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #FFFBEA; /* پس‌زمینه کرم */
+    color: #4F772D; /* متن سبز تیره */
+    transition: border-color 0.3s ease;
+}
+
+.elementor-field-group input[type="text"]:focus,
+.elementor-field-group input[type="number"]:focus,
+.elementor-field-group textarea:focus {
+    border-color: #4F772D; /* تغییر رنگ حاشیه در فوکوس */
+    outline: none;
+}
+
+body .elementor-555 .elementor-element.elementor-element-8757392 .elementor-labels-above .elementor-field-group > label {
+    padding-bottom: 10px !important;
+}
+/* افزایش فاصله بالا و پایین بین آیتم‌ها */
+.elementor-field-subgroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* فاصله بین آیتم‌ها */
+    padding: 15px 0; /* فاصله از بالا و پایین */
+    justify-content: flex-start;
+    row-gap: 35px;
+}
+/* استایل آیتم‌های چک‌باکس و رادیویی */
+.elementor-field-option label {
+    padding: 8px 8px;
+    border: 2px solid #6A492B;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-align: center;
+    color: #4F772D;
+    background-color: #FFFBEA;
+    position: relative;
+    margin: 5px 0; /* فاصله بالا و پایین بین آیتم‌ها */
+}
+
+/* مخفی کردن دایره چک‌باکس و رادیو پیش‌فرض */
+.elementor-field-option input[type="checkbox"],
+.elementor-field-option input[type="radio"] {
+    display: none !important;
+}
+
+/* استایل برای آیتم انتخاب‌شده */
+.elementor-field-option input[type="checkbox"]:checked + label,
+.elementor-field-option input[type="radio"]:checked + label {
+    background-color: #4F772D; /* پس‌زمینه سبز تیره */
+    color: #FFFBEA; /* متن کرم */
+    border-color: #4F772D;
+}
+
+/* تیک برای آیتم انتخاب‌شده */
+.elementor-field-option input[type="checkbox"]:checked + label::before,
+.elementor-field-option input[type="radio"]:checked + label::before {
+    content: "✓";
+    background-color: #FFFBEA;
+    border: 2px solid #4F772D;
+    border-radius: 50%;
+    color: #4F772D;
+    font-size: 14px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+/* دکمه‌ها */
+.elementor-button {
+    background-color: #4F772D; /* سبز تیره */
+    color: #FFFBEA; /* متن کرم */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.elementor-button:hover {
+    background-color: #3A6132; /* سبز تیره‌تر */
+}
+
+/* نوار پیشرفت */
+.e-form__indicators__indicator__icon {
+    background-color: #E6D3C3; /* قهوه‌ای روشن */
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.e-form__indicators__indicator--state-completed .e-form__indicators__indicator__icon {
+    background-color: #4F772D; /* سبز تیره */
+}
+
+.e-form__indicators__indicator--state-active .e-form__indicators__indicator__icon {
+    background-color: #F3C13A; /* زرد گرم */
+}
+
+.e-form__indicators__indicator__separator {
+    height: 3px;
+    background-color: #6A492B; /* قهوه‌ای تیره */
+    width: 100%;
+}
+
+
+
+
+/*****************************/
+
+
+/* واکنش‌گرا */
+@media (max-width: 768px) {
+  .woocommerce-columns--addresses {
+    flex-direction: column !important;
+  }
+
+  .woocommerce-column {
+    margin-bottom: 20px !important;
+  }
+
+  .woocommerce-order-overview li {
+    font-size: 0.9rem !important;
+  }
+
+  .woocommerce-order-details__title {
+    font-size: 1.5rem !important;
+  }
+
+  .shop_table.order_details th,
+  .shop_table.order_details td {
+    font-size: 0.9rem !important;
+  }
+
+
+
+
+
+
+
+
+
+
+   
+  .elementor-post__card, .elementor-post__text {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.8rem;
+  }
+
+  .elementor-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+/* واکنش‌گرا */
+@media (max-width: 768px) {
+    h2.elementor-heading-title.elementor-size-default {
+    line-height: 1.2 !important;
+}
+  }
+  
+  
+  
+  /* استایل کلی اسلایدر */
+.pro-tax-slider { padding: 20px 0; }
+
+.tax-card-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none !important;
+    transition: transform 0.3s ease;
+}
+
+.tax-card-link:hover { transform: translateY(-10px); }
+
+/* دایره‌ها با حاشیه و افکت */
+.tax-circle-pro {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 2px solid #d90429;
+    background: #151515;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.tax-circle-pro:hover {
+    border-color: #fff;
+    box-shadow: 0 0 20px rgba(217, 4, 41, 0.5);
+    background: #d90429;
+}
+
+.tax-circle-pro img {
+    width: 60%;
+    transition: transform 0.4s ease;
+}
+
+.tax-card-link:hover .tax-circle-pro img { transform: scale(1.1); }
+
+/* نام دسته بندی */
+.tax-title {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+/* =========================================
+   Pro Taxonomy Grid Styles - ساده و مینیمال
+========================================= */
+.pro-tax-grid-wrapper {
+    /* --- متغیرهای سایز --- */
+    --pro-tax-gap: 20px;
+    --pro-tax-radius: 12px;
+    --pro-tax-img-size: 180px;
+    --pro-tax-box-height: auto;
+    --pro-tax-title-size: 15px;
+    
+    /* --- متغیرهای رنگ ساده --- */
+ /*   --pro-tax-card-bg: #ffffff;*/
+    --pro-tax-title-color: #ffffff;
+    --pro-tax-title-hover: #e2231a;
+    --pro-tax-subtitle-color: #ffffff;
+ /*   --pro-tax-logo-bg: #f5f5f5;*/
+
+    margin: 28px auto;
+    padding: 0 18px;
+    direction: rtl;
+    box-sizing: border-box;
+}
+
+/* حل مشکل box-sizing */
+.pro-tax-grid-wrapper *,
+.pro-tax-grid-wrapper *::before,
+.pro-tax-grid-wrapper *::after {
+    box-sizing: border-box;
+}
+
+.pro-tax-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--desk-cols, 5), minmax(0, 1fr));
+    gap: var(--pro-tax-gap);
+    align-items: stretch;
+}
+
+.pro-tax-item {
+    min-width: 0;
+    height: 100%;
+}
+
+/* --- استایل ساده باکس (بدون سایه و بدون border) --- */
+.pro-tax-item-link {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 100%;
+    padding: 20px 15px;
+    text-align: center;
+    text-decoration: none;
+    
+    /* حذف همه خطوط و سایه‌ها */
+    background: var(--pro-tax-card-bg);
+    border: none;
+    border-radius: var(--pro-tax-radius);
+    box-shadow: none;
+    
+    transition: all 0.3s ease;
+}
+
+/* حذف افکت نور پنهان */
+.pro-tax-item-link::before {
+    display: none;
+}
+
+/* --- فقط افکت hover ساده (بدون سایه) --- */
+/*.pro-tax-item-link:hover {
+    transform: translateY(-5px);
+    background: #fafafa;
+    border: none;
+    box-shadow: none;
+}
+*/
+/* --- استایل محفظه عکس (بدون سایه و بدون border) --- */
+.pro-tax-image-wrapper {
+    width: min(100%, var(--pro-tax-img-size));
+    aspect-ratio: 1 / 1;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--pro-tax-radius);
+    background: var(--pro-tax-logo-bg);
+    border: none;
+    box-shadow: none;
+    
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* --- hover ساده روی عکس --- */
+/*.pro-tax-item-link:hover .pro-tax-image-wrapper {
+    transform: scale(1.02);
+    border: none;
+    box-shadow: none;
+}*/
+
+/* --- استایل خود عکس --- */
+.pro-tax-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* --- زوم ساده عکس در hover --- */
+.pro-tax-item-link:hover .pro-tax-img {
+    transform: scale(1.05);
+}
+
+/* --- استایل نام (عنوان) ساده --- */
+.pro-tax-title {
+    width: 100%;
+    margin: 0;
+    font-size: var(--pro-tax-title-size);
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--pro-tax-title-color);
+    transition: color 0.3s ease;
+    word-break: break-word;
+    z-index: 2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* --- hover ساده روی نام --- */
+.pro-tax-item-link:hover .pro-tax-title {
+    color: var(--pro-tax-title-hover);
+    text-shadow: none;
+}
+
+/* --- گروه متن --- */
+.pro-tax-text-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    z-index: 2;
+}
+
+/* --- استایل ساب‌تایتل ساده --- */
+.pro-tax-subtitle {
+    font-size: 12px;
+    color: var(--pro-tax-subtitle-color);
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    transition: color 0.3s ease;
+}
+
+.pro-tax-item-link:hover .pro-tax-subtitle {
+    background: transparent;
+    color: var(--pro-tax-title-hover);
+    box-shadow: none;
+}
+
+/* --- استایل حالت خالی (بدون تصویر) --- */
+.pro-tax-image-wrapper.is-empty {
+    background: #f5f5f5;
+}
+
+.no-image-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--pro-tax-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cccccc;
+    background: transparent;
+    border: none;
+}
+
+.no-image-placeholder svg {
+    width: 36px;
+    height: 36px;
+}
+
+/* =========================================
+   استایل Flip ساده (بدون سایه)
+========================================= */
+.style-flip .pro-tax-item {
+    perspective: 1000px;
+}
+
+.pro-tax-flip-container {
+    width: 100%;
+    height: 100%;
+    min-height: var(--pro-tax-box-height);
+}
+
+.pro-tax-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transform-style: preserve-3d;
+}
+
+.style-flip .pro-tax-item:hover .pro-tax-flip-inner {
+    transform: rotateY(180deg);
+}
+
+.pro-tax-flip-front,
+.pro-tax-flip-back {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: var(--pro-tax-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 15px;
+}
+
+/* روی کارت - ساده */
+.pro-tax-flip-front {
+    background: var(--pro-tax-card-bg);
+    border: none;
+    box-shadow: none;
+    gap: 15px;
+}
+
+/* پشت کارت - ساده */
+.pro-tax-flip-back {
+    background: #fafafa;
+    border: none;
+    box-shadow: none;
+    transform: rotateY(180deg);
+    gap: 15px;
+}
+
+.pro-tax-title-back {
+    color: var(--pro-tax-title-hover);
+    font-size: calc(var(--pro-tax-title-size) + 2px);
+    margin: 0;
+    text-shadow: none;
+}
+
+.pro-tax-count-badge {
+    color: var(--pro-tax-subtitle-color);
+    font-size: 13px;
+}
+
+/* دکمه ساده پشت کارت */
+.pro-tax-btn-neon {
+    margin-top: 10px;
+    padding: 8px 24px;
+    background: var(--pro-tax-title-hover);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.pro-tax-btn-neon:hover {
+    background: #005a8c;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   رسپانسیو - تبلت
+========================================= */
+@media (max-width: 992px) {
+    .pro-tax-grid-wrapper {
+        --pro-tax-gap: 16px;
+        --pro-tax-img-size: 160px;
+        --pro-tax-title-size: 14px;
+        padding: 0 14px;
+    }
+    
+    .pro-tax-grid {
+        grid-template-columns: repeat(var(--tab-cols, 3), minmax(0, 1fr));
+    }
+
+    .pro-tax-item-link {
+        gap: 12px;
+        padding: 15px 10px;
+    }
+}
+
+/* =========================================
+   رسپانسیو - موبایل
+========================================= */
+@media (max-width: 640px) {
+    .pro-tax-grid-wrapper {
+        --pro-tax-gap: 12px;
+        --pro-tax-radius: 10px;
+        --pro-tax-img-size: 140px;
+        --pro-tax-title-size: 13px;
+        margin: 22px auto;
+        padding: 0 10px;
+    }
+    
+    .pro-tax-grid {
+        grid-template-columns: repeat(var(--mob-cols, 2), minmax(0, 1fr));
+    }
+
+    .pro-tax-item-link {
+        padding: 12px 8px;
+        gap: 10px;
+    }
+
+    .pro-tax-item-link:hover {
+        transform: translateY(-3px);
+    }
+
+    .no-image-placeholder svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* =========================================
+   ردیف اطلاعات محصول (دسته‌بندی، برند، مدل، SKU و ...)
+========================================= */
+.car-part-info-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 6px 0;
+    column-gap: 15px;
+}
+
+
+.car-part-info-row .info-label {
+    flex: 0 0 110px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    position: relative;
+}
+
+.car-part-info-row .info-label::after {
+    content: ":";
+    margin-right: 4px;
+}
+
+.car-part-info-row .info-values {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 6px; /* فاصله بین آیتم‌ها و جداکننده‌ها */
+}
+
+/* ========== لینک‌های ترم (بدون ظاهر دکمه) ========== */
+.car-part-info-row .info-term-link {
+    color: #0d6efd;          /* رنگ لینک معمولی */
+    font-size: 13px;
+    text-decoration: none;
+    border: none;
+    background: none;        /* حذف پس‌زمینه */
+    padding: 0;              /* حذف padding اضافی */
+    border-radius: 0;        /* حذف گردی گوشه‌ها */
+    transition: color 0.2s ease;
+}
+
+.car-part-info-row .info-term-link:hover {
+    color: #0a58ca;
+    text-decoration: underline;
+}
+
+/* ========== جداکننده بین ترم‌ها ========== */
+.car-part-info-row .term-separator {
+    color: #888;
+    font-size: 13px;
+    margin: 0 2px;
+}
+
+/* ========== نمایش SKU ========== */
+.car-part-info-row.sku-row .info-sku {
+    font-size: 13px;
+    color: #333;
+    font-weight: normal;
+    background: none;
+    padding: 0;
+}
+
+/* (اختیاری) در صورت نیاز به استایل اختصاصی برای هر تاکسونومی */
+.taxonomy-product_cat .info-term-link {
+    /* مثال: رنگ متفاوت برای سیستم قطعه */
+    /* color: #198754; */
+}
+
+/* ========== واکنش‌گرایی برای موبایل ========== */
+@media (max-width: 480px) {
+    .car-part-info-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 14px 0;
+    }
+    .car-part-info-row .info-label {
+        flex: none;
+        font-size: 13px;
+    }
+}
+
+/* باکس کلی تماس */
+.contact-box {
+    margin: 25px 0;
+    padding: 15px;
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+/* عنوان "تماس با ما" */
+.contact-title {
+    font-weight: 800;
+    font-size: 16px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #00a693; /* خط سبز برای تأکید */
+    display: inline-block;
+    color: #333;
+}
+
+/* لیست آیتم‌ها */
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* هر خط تماس */
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    text-decoration: none !important;
+    transition: 0.3s;
+    color: #444;
+}
+
+/* افکت هاور */
+.contact-item:hover {
+    background: #eefdfb;
+    color: #00a693;
+}
+
+/* استایل برچسب (مثلاً واحد فروش) */
+.contact-item .label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* استایل شماره */
+.contact-item .number {
+    font-family: monospace;
+    font-size: 14px;
+    direction: ltr; /* جهت نمایش درست شماره */
+}
+
+
+
+
+
+
+
+
+
+
+/* استایل باکس نگهدارنده به صورت عمودی */
+body ul.custom-category-menu {
+    display: flex !important;
+    flex-direction: column !important; /* چیدمان عمودی */
+    gap: 12px !important; /* فاصله بین آیتم‌ها */
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 20px 0 !important;
+    align-items: flex-start !important; /* چینش از سمت راست */
+}
+
+body ul.custom-category-menu li {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style-type: none !important;
+    background: transparent !important;
+}
+
+/* استایل لینک‌ها (حالت متنی تمیز) */
+body ul.custom-category-menu li a {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 5px 0 !important;
+    background-color: transparent !important; /* حذف پس‌زمینه دکمه‌ای */
+    color: #333333 !important; /* رنگ تیره برند */
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    border: none !important; /* حذف خطوط دور */
+    box-shadow: none !important; /* حذف سایه */
+    transition: all 0.3s ease !important;
+}
+
+/* ساخت آیکون (فلش کوچک) با CSS در کنار متن */
+body ul.custom-category-menu li a::before {
+    content: '' !important;
+    display: inline-block !important;
+    width: 6px !important;
+    height: 6px !important;
+    border-top: 2px solid #CA0202 !important; /* رنگ قرمز برند برای آیکون */
+    border-right: 2px solid #CA0202 !important;
+    transform: rotate(-135deg) !important; /* چرخش برای ایجاد فلش رو به چپ */
+    margin-left: 10px !important; /* فاصله آیکون تا متن */
+    transition: all 0.3s ease !important;
+}
+
+/* افکت Hover (رفتن موس روی آیتم) */
+body ul.custom-category-menu li a:hover {
+    color: #CA0202 !important; /* تغییر رنگ متن به قرمز */
+    transform: translateX(-5px) !important; /* حرکت ملایم متن به سمت چپ */
+}
+
+/* در صورت نیاز به تغییر رنگ آیکون در حالت Hover */
+body ul.custom-category-menu li a:hover::before {
+    border-color: #CA0202 !important; 
+}
+
+.elementor-menu-cart__toggle .elementor-button {
+    border-radius: 5px !important;
+
+}
+
+/* ============================================================
+   استایل نهایی بخش نظرات ووکامرس (مدرن + چپ‌چین + کاهش سایز)
+   ============================================================ */
+/* ============================================================
+   استایل نهایی بخش نظرات ووکامرس
+   شامل: چپ‌چینی، هاور، اکتیو، فوکوس، انتخاب
+   ============================================================ */
+
+/* --- محفظه کلی --- */
+.comments-area,
+#reviews {
+    padding: 0.5rem 0.5rem;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.3s ease;
+}
+.comments-area:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* --- عنوان بخش --- */
+.comments-title,
+#reviews .comment-reply-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+    border-bottom: none !important;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+/* --- فیلدهای ورودی --- */
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.comment-form-author label,
+.comment-form-email label,
+.comment-form-comment label {
+    display: block;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #334155;
+    margin-bottom: 0.4rem;
+}
+.comment-form-author input,
+.comment-form-email input,
+.comment-form-comment textarea {
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 16px;
+    transition: all 0.25s ease;
+    box-sizing: border-box;
+    outline: none;
+}
+.comment-form-author input:focus,
+.comment-form-email input:focus,
+.comment-form-comment textarea:focus {
+    background: #ffffff;
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+}
+.comment-form-comment textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* --- بخش امتیاز (ستاره‌ها) --- */
+.comment-form-rating {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    margin: 0.25rem 0 0.5rem;
+}
+.comment-form-rating label {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #334155;
+    margin: 0;
+}
+
+/* ترتیب از کم به زیاد (۱ تا ۵) + اندازه مناسب */
+.comment-form-rating .stars {
+    direction: ltr !important;
+    unicode-bidi: normal !important;
+    display: inline-flex;
+    flex-direction: row-reverse;
+}
+.comment-form-rating .stars a,
+.comment-form-rating .stars label {
+    font-size: 1.8rem !important;
+    padding: 0 0.2rem !important;
+    line-height: 1.2 !important;
+    color: #cbd5e1 !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease, transform 0.15s ease;
+    cursor: pointer;
+    order: 1;
+}
+/* ===== رفتار هاور (Hover) ===== */
+.comment-form-rating .stars a:hover,
+.comment-form-rating .stars a:hover ~ a,
+.comment-form-rating .stars label:hover,
+.comment-form-rating .stars label:hover ~ label {
+    color: #fbbf24 !important;
+}
+/* ===== رفتار کلیک و فعال (Active) ===== */
+.comment-form-rating .stars a:active,
+.comment-form-rating .stars label:active {
+    transform: scale(0.88);
+}
+/* ===== حالت انتخاب‌شده (Selected) ===== */
+.comment-form-rating .stars .selected,
+.comment-form-rating .stars a.selected,
+.comment-form-rating .stars label.selected,
+.comment-form-rating .stars .chosen,
+.comment-form-rating .stars .active,
+.comment-form-rating .stars .current,
+.comment-form-rating .stars input:checked ~ a,
+.comment-form-rating .stars input:checked ~ label,
+.comment-form-rating .stars a[aria-checked="true"],
+.comment-form-rating .stars label[aria-checked="true"] {
+    color: #f59e0b !important;
+}
+
+/* --- دکمه ثبت (چپ‌چین، کاهش سایز، افکت فشرده‌شدن) --- */
+.form-submit {
+    text-align: left !important;
+    margin-top: 0.5rem;
+}
+.submit {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.8rem !important;
+    font-size: 0.9rem !important;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+.submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.35);
+}
+.submit:active {
+    transform: scale(0.95) translateY(0px) !important;
+    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.2);
+}
+.submit:focus-visible {
+    outline: 2px solid #8b5cf6;
+    outline-offset: 2px;
+}
+
+/* --- واکنش‌گرایی موبایل --- */
+@media (max-width: 640px) {
+    .comments-area,
+    #reviews {
+        padding: 1.5rem 1rem;
+        margin: 1.5rem 0.5rem;
+    }
+    .comment-form-rating .stars a,
+    .comment-form-rating .stars label {
+        font-size: 1.6rem !important;
+    }
+    .form-submit {
+        text-align: left !important;
+    }
+    .submit {
+        width: 100% !important;
+        justify-content: center;
+        white-space: normal;
+        padding: 0.7rem 1.2rem !important;
+    }
+}
+
+/* --- بازنویسی استایل‌های مزاحم ووکامرس --- */
+.woocommerce #review_form #respond .comment-form-rating .stars a,
+.woocommerce #review_form #respond .comment-form-rating .stars label {
+    font-size: 1.8rem !important;
+    color: #cbd5e1 !important;
+    padding: 0 0.2rem !important;
+    text-decoration: none !important;
+}
+.woocommerce #review_form #respond .comment-form-rating .stars a:hover,
+.woocommerce #review_form #respond .comment-form-rating .stars a:hover ~ a,
+.woocommerce #review_form #respond .comment-form-rating .stars label:hover,
+.woocommerce #review_form #respond .comment-form-rating .stars label:hover ~ label {
+    color: #fbbf24 !important;
+}
+.woocommerce #review_form #respond .comment-form-rating .stars .selected a,
+.woocommerce #review_form #respond .comment-form-rating .stars .selected a ~ a,
+.woocommerce #review_form #respond .comment-form-rating .stars a.selected,
+.woocommerce #review_form #respond .comment-form-rating .stars a.selected ~ a,
+.woocommerce #review_form #respond .comment-form-rating .stars .selected label,
+.woocommerce #review_form #respond .comment-form-rating .stars .selected label ~ label,
+.woocommerce #review_form #respond .comment-form-rating .stars label.selected,
+.woocommerce #review_form #respond .comment-form-rating .stars label.selected ~ label {
+    color: #f59e0b !important;
+}
+
+
+
+/* =========================================
+   بازطراحی صفحه  - mozhgan"سفارش دریافت شد" (Thank You Pag- صفحه فاکتور سایت)
+========================================= */
+
+body.woocommerce-order-received .woocommerce-order {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 !important;
+    background: #fff;
+    box-shadow: none !important;
+}
+
+/* پیام موفقیت */
+body.woocommerce-order-received .woocommerce-notice--success {
+    background: #F0EAE0 !important;
+    border-right: 4px solid #e2231a !important;
+    border-radius: 10px !important;
+    padding: 14px 18px !important;
+    font-size: 0.95rem !important;
+    color: #2A3B2C !important;
+    box-shadow: none !important;
+}
+
+/* باکس‌های خلاصه سفارش */
+body.woocommerce-order-received .woocommerce-order-overview {
+    background: #fff !important;
+    border: 1px solid #E5DFD3 !important;
+    border-radius: 14px !important;
+    padding: 4px !important;
+    box-shadow: none !important;
+    gap: 0 !important;
+}
+
+body.woocommerce-order-received .woocommerce-order-overview li {
+    flex: 1 1 150px !important;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 14px 10px !important;
+    margin: 6px !important;
+    background: #F0EAE0 !important;
+    font-size: 0.8rem !important;
+    color: #777 !important;
+}
+
+body.woocommerce-order-received .woocommerce-order-overview strong {
+    color: #1a1a1a !important;
+    font-size: 1.05rem !important;
+    font-weight: 500 !important;
+    margin-top: 6px !important;
+}
+
+/* متن ایمیل کوچیک‌تر */
+body.woocommerce-order-received .woocommerce-order-overview__email strong {
+    font-size: 0.8rem !important;
+    word-break: break-all;
+    line-height: 1.4;
+}
+
+/* روش پرداخت مشکی، نه رنگی */
+body.woocommerce-order-received .woocommerce-order-overview__payment-method strong {
+    color: #1a1a1a !important;
+}
+
+/* عنوان جزئیات سفارش */
+body.woocommerce-order-received .woocommerce-order-details__title,
+body.woocommerce-order-received .woocommerce-column__title {
+    font-size: 1.2rem !important;
+    border-bottom: none !important;
+    color: #2A3B2C !important;
+    font-weight: 500 !important;
+}
+
+/* جدول محصولات */
+body.woocommerce-order-received .shop_table.order_details {
+    border: 1px solid #E5DFD3 !important;
+    border-radius: 14px !important;
+    overflow: hidden;
+    box-shadow: none !important;
+}
+
+body.woocommerce-order-received .shop_table.order_details th {
+    background: #F0EAE0 !important;
+    color: #2A3B2C !important;
+    font-size: 0.88rem !important;
+    font-weight: 500 !important;
+}
+
+body.woocommerce-order-received .shop_table.order_details td {
+    border-bottom: 1px solid #E5DFD3 !important;
+    font-size: 0.88rem !important;
+    color: #1a1a1a !important;
+}
+
+body.woocommerce-order-received .shop_table.order_details tfoot td {
+    background: #F0EAE0 !important;
+    color: #1a1a1a !important;
+    font-weight: 700 !important;
+}
+
+/* باکس آدرس صورتحساب - پس‌زمینه قرمز */
+body.woocommerce-order-received .woocommerce-column {
+    background: #F0EAE0 !important;
+    border: 1px solid #F0C6C6 !important;
+    border-radius: 14px !important;
+    box-shadow: none !important;
+}
+
+body.woocommerce-order-received .woocommerce-column address,
+body.woocommerce-order-received .woocommerce-column p {
+    color: #2A3B2C !important;
+}
+
+/* سایز لوگو بالای صفحه */
+body.woocommerce-order-received .custom-logo-link {
+    display: inline-block !important;
+}
+body.woocommerce-order-received .custom-logo-link img {
+    max-width: 140px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+}
+
+/* موبایل */
+@media (max-width: 640px) {
+    body.woocommerce-order-received .woocommerce-order-overview li {
+        flex: 1 1 100% !important;
+        margin: 4px 0 !important;
+    }
+}
+/* لوگوی کوچیک‌تر و در بالای صفحه */
+body.woocommerce-order-received #razeghi-thankyou-logo {
+    margin: 10px 0 24px !important;
+}
+body.woocommerce-order-received #razeghi-thankyou-logo .custom-logo-link img {
+    max-width: 130px !important;
+    height: auto !important;
+}
+
+/* حذف کامل ایمیل - هم در باکس بالا هم در آدرس صورتحساب */
+body.woocommerce-order-received .woocommerce-order-overview__email {
+    display: none !important;
+}
+body.woocommerce-order-received .woocommerce-customer-details--email {
+    display: none !important;
+}
+
+/* قرمز شدن قطعی باکس آدرس صورتحساب */
+/* باکس بیرونی: سفید با بوردر */
+body.woocommerce-order-received .woocommerce-customer-details {
+    background: #fff !important;
+    border: 1px solid #E5DFD3 !important;
+    border-radius: 14px !important;
+    padding: 20px !important;
+}
+
+/* باکس داخلی (خود اطلاعات آدرس): قرمز */
+body.woocommerce-order-received .woocommerce-customer-details address {
+    background: #F0EAE0 !important;
+    /*border: 1px solid #F0C6C6 !important;*/
+    border-radius: 10px !important;
+    padding: 16px !important;
+    color: #2A3B2C !important;
+    height: auto !important;
+}
+
+body.woocommerce-order-received .woocommerce-customer-details--email {
+    display: none !important;
+}
+/* اسم محصول در جدول سفارش - مشکی با آندرلاین در هاور */
+body.woocommerce-order-received .shop_table.order_details .woocommerce-table__product-name a {
+    color: #1a1a1a !important;
+    text-decoration: none !important;
+}
+
+body.woocommerce-order-received .shop_table.order_details .woocommerce-table__product-name a:hover {
+    color: #1a1a1a !important;
+    text-decoration: underline !important;
+}
+
+
+body.woocommerce-order-received .razeghi-order-details-box {
+    border: 1px solid #E5DFD3;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* چون جدول قبلاً خودش بردر و رادیوس داشت، حالا که داخل باکس جدیده، این دوتا رو حذف می‌کنیم تا دوتایی نشه */
+body.woocommerce-order-received .razeghi-order-details-box .shop_table.order_details {
+    border: none !important;
+    border-radius: 10px !important;
+    margin-bottom: 0 !important;
+}
+
+body.woocommerce-order-received .razeghi-order-details-box .woocommerce-order-details__title {
+    margin-bottom: 14px !important;
+}
+
+/* پرینت */
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 10mm;
+    }
+
+    body.woocommerce-order-received header,
+    body.woocommerce-order-received footer,
+    body.woocommerce-order-received .floating-toggle-container,
+    body.woocommerce-order-received nav,
+    body.woocommerce-order-received .elementor-location-header,
+    body.woocommerce-order-received .elementor-location-footer,
+    body.woocommerce-order-received .razeghi-print-btn-wrap {
+        display: none !important;
+    }
+
+    body.woocommerce-order-received {
+        background: #fff !important;
+        width: 100% !important;
+    }
+
+    body.woocommerce-order-received .woocommerce-order {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+    }
+
+    body.woocommerce-order-received .woocommerce-order-overview,
+    body.woocommerce-order-received .shop_table.order_details,
+    body.woocommerce-order-received .woocommerce-customer-details {
+        box-shadow: none !important;
+        width: 100% !important;
+    }
+    
+    body.woocommerce-order-received .ast-container,
+    body.woocommerce-order-received .site-content,
+    body.woocommerce-order-received #content,
+    body.woocommerce-order-received .elementor,
+    body.woocommerce-order-received .elementor-section-wrap {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    body.woocommerce-order-received .woocommerce-order {
+        margin: 0 auto !important;
+        direction: rtl !important;
+    }
+
+    /* حذف نمایش آدرس لینک زیر متن (رفتار پیش‌فرض پرینت) */
+    body.woocommerce-order-received a[href]:after,
+    body.woocommerce-order-received a[href]:before {
+        content: "" !important;
+    }
+}
+
+
+/*mini cart - mozhgan*/
+
+/* رنگ نام محصول -> مشکی + کوچک‌تر + حداکثر ۲ خط */
+.elementor-menu-cart__product-name a,
+.elementor-menu-cart__product-name a:visited {
+    color: #000000 !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+/* کوچک‌تر شدن فونت جمع جزء */
+.elementor-menu-cart__subtotal,
+.elementor-menu-cart__subtotal .woocommerce-Price-amount {
+    font-size: 13px !important;
+}
+
+/* ---- دکمه‌های پایین: رفع کادر اضافه دور نوشته ---- */
+.elementor-menu-cart__footer-buttons {
+    display: flex !important;
+    gap: 10px !important;
+}
+.elementor-menu-cart__footer-buttons a.elementor-button--checkout {
+    background-color: #000000 !important;
+    border: 2px solid #000000 !important;
+}
+.elementor-menu-cart__footer-buttons a.elementor-button--checkout .elementor-button-text {
+    color: #ffffff !important;
+    border: none !important;
+}
+.elementor-menu-cart__footer-buttons a.elementor-button--view-cart {
+    background-color: #ffffff !important;
+    border: 2px solid #000000 !important;
+}
+.elementor-menu-cart__footer-buttons a.elementor-button--view-cart .elementor-button-text {
+    color: #000000 !important;
+    border: none !important;
+}
+
+/* ---- چیدمان ردیف محصول: سطل زباله ثابت سمت راست ---- */
+
+.elementor-menu-cart__product {
+    display: flex !important;
+    align-items: center !important;
+    direction: rtl !important;
+    flex-wrap: nowrap !important;
+    gap: 8px;
+}
+.elementor-menu-cart__product-remove { order: 1 !important; flex: 0 0 auto !important; }
+.elementor-menu-cart__product-image  { order: 2 !important; flex: 0 0 60px !important; width: 60px !important; }
+.elementor-menu-cart__product-name   { order: 3 !important; flex: 1 1 auto !important; min-width: 0; }
+.elementor-menu-cart__product-price  { order: 4 !important; flex: 0 0 auto !important; }
+
+.elementor-menu-cart__product-remove a.remove_from_cart_button {
+    display: none !important;
+}
+.elementor-menu-cart__product-remove a.elementor_remove_from_cart_button {
+    all: unset !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+}
+.elementor-menu-cart__product-remove a.elementor_remove_from_cart_button::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: #e2231a;
+    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M9 3v1H4v2h16V4h-5V3H9zm-3 6v11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9H6zm4 2h2v9h-2v-9zm4 0h2v9h-2v-9z'/></svg>");
+    mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M9 3v1H4v2h16V4h-5V3H9zm-3 6v11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9H6zm4 2h2v9h-2v-9zm4 0h2v9h-2v-9z'/></svg>");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+.elementor-menu-cart__product-remove a.elementor_remove_from_cart_button:hover {
+    background-color: #e2231a !important;
+}
+.elementor-menu-cart__product-remove a.elementor_remove_from_cart_button:hover::before {
+    background-color: #ffffff !important;
+}
+
+/* ---- آیکون سطل زباله (SVG داخلی، بدون وابستگی به فونت) ---- */
+.elementor-menu-cart__product-remove a.remove_from_cart_button {
+    display: none !important;
+}
+.elementor-menu-cart__product-remove a.elementor_remove_from_cart_button {
+    all: unset !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+}
+.elementor-menu-cart__product-remove a.elementor_remove_from_cart_button::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: #e2231a;
+    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M9 3v1H4v2h16V4h-5V3H9zm-3 6v11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9H6zm4 2h2v9h-2v-9zm4 0h2v9h-2v-9z'/></svg>");
+    mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M9 3v1H4v2h16V4h-5V3H9zm-3 6v11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9H6zm4 2h2v9h-2v-9zm4 0h2v9h-2v-9z'/></svg>");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+.elementor-menu-cart__product-remove a.elementor_remove_from_cart_button:hover {
+    background-color: #e2231a !important;
+}
+.elementor-menu-cart__product-remove a.elementor_remove_from_cart_button:hover::before {
+    background-color: #ffffff !important;
+}
+
+/* ---- باکس تعداد جمع‌وجورتر ---- */
+.elementor-menu-cart__product-price .nb-cart-qty-stepper {
+    display: inline-flex !important;
+    align-items: center !important;
+    direction: rtl;
+    width: max-content;
+    border: 1.5px solid var(--button-border-color, #8D6E63) !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+    background: #ffffff !important;
+    padding: 2px !important;
+    margin: 0 !important;
+}
+.nb-cart-qty-stepper .nb-qty-plus  { order: 1; }
+.nb-cart-qty-stepper .quantity     { order: 2; }
+.nb-cart-qty-stepper .nb-qty-minus { order: 3; }
+
+.nb-cart-qty-stepper .nb-qty-btn {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    border: none !important;
+    background: transparent !important;
+    color: var(--text-color, #2A3B2C) !important;
+    font-size: 14px !important;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px !important;
+    padding: 0 !important;
+    transition: all 0.2s ease;
+}
+.nb-cart-qty-stepper .nb-qty-btn:hover {
+    background: var(--main-bg-color, #F4F1DE) !important;
+}
+.nb-cart-qty-stepper .quantity {
+    width: 26px !important;
+    height: 24px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center;
+    background: transparent !important;
+    margin: 0 !important;
+    border: none !important;
+}
+.nb-cart-qty-stepper .quantity .qty {
+    width: 100% !important;
+    height: 24px !important;
+    text-align: center !important;
+    border: none !important;
+    background: transparent !important;
+    font-size: 12px !important;
+    font-weight: 600;
+    color: var(--text-color, #2A3B2C) !important;
+    padding: 0 !important;
+}
+
+/* حالتی که تعداد به ۱ رسیده و منفی تبدیل به سطل می‌شه */
+.nb-cart-qty-stepper .nb-qty-minus.nb-qty-delete-mode {
+    font-size: 0 !important;
+    position: relative;
+}
+.nb-cart-qty-stepper .nb-qty-minus.nb-qty-delete-mode::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: #e2231a;
+    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M9 3v1H4v2h16V4h-5V3H9zm-3 6v11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9H6zm4 2h2v9h-2v-9zm4 0h2v9h-2v-9z'/></svg>");
+    mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M9 3v1H4v2h16V4h-5V3H9zm-3 6v11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9H6zm4 2h2v9h-2v-9zm4 0h2v9h-2v-9z'/></svg>");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+.nb-cart-qty-stepper .nb-qty-minus.nb-qty-delete-mode:hover {
+    background-color: #e2231a !important;
+}
+.nb-cart-qty-stepper .nb-qty-minus.nb-qty-delete-mode:hover::before {
+    background-color: #ffffff !important;
+}
+
+/* حذف کامل هر × دیفالت المنتور در محصول مینی‌کارت */
+.elementor-menu-cart__product .elementor-menu-cart__product-remove svg,
+.elementor-menu-cart__product .elementor-menu-cart__product-remove i,
+.elementor-menu-cart__product-remove a.remove_from_cart_button {
+    display: none !important;
+}
+
+
+/* زیر رفتن دکمه شناور تماس در off-canvas */
+.floating-toggle-container {
+    z-index: 500 !important;
+}
+/*end of mini cart - mozhgan*/
